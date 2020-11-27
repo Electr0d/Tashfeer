@@ -1,0 +1,29 @@
+:root {
+  --primary-background: rgb(20, 20, 20);
+  --secondary-background: rgb(50, 50, 50);
+  --primary-color: rgb(220, 220, 220);
+  --primary-shadow: rgb(50, 50, 50);
+  --primary-hover: rgb(50, 50, 50);
+  
+
+  --primary-accent: rgb(200, 50, 50);
+  --primary-accent-transparent: rgba(200, 50, 50, 0.7);
+  --secondary-accent: rgb(40, 40, 40);
+
+
+
+  --input-border: rgb(100, 100, 100);
+  --input-border-active: var(--primary-accent);
+
+
+  --card-background: rgb(30, 30, 30);
+
+  --output-background: rgb(45, 45, 65);
+
+  --prefix-color: rgb(200, 50, 50);
+  --result-color: rgb(50, 200, 50);
+
+
+  --row-highlight: rgb(80, 96, 168);
+  --copy-color: rgb(121, 145, 255);
+}

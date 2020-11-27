@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/mainWindow.css">
+    <link rel="stylesheet" href="assets/css/windowBar.css">
+    <title>Tashfeer</title>
+</head>
+
+<body>
+
+    <!-- Window Controls -->
+    <header id="titlebar">
+        <div id="drag-region">
+            <div id="window-title">
+                <img src="" height="20px">
+                <span style="padding-left: 10px;">Tashfeer</span>
+            </div>
+
+            <div id="window-controls">
+                <div class="button" id="min-button">
+                    <img src="assets/window_icons/minimize.png" class="window-icon">
+                </div>
+                <div class="button" id="max-button">
+                    <img src="assets/window_icons/maximize.png" class="window-icon">
+                </div>
+                <div class="button" id="restore-button">
+                    <img src="assets/window_icons/restore.png" class="window-icon">
+                </div>
+                <div class="button" id="close-button">
+                    <img src="assets/window_icons/close.png" class="window-icon">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="app">
+
+        <div class="header">Tashfeer</div>
+        <div class="cards">
+            <div class="input card">
+                <div class="card-header">Input</div>
+
+                <div class="card-body">
+                    <div class="label">String:</div>
+                    <input class="number">
+                    <div class="label">Parameters:</div>
+                    <div class="parameters" id="input-parameters">
+                        <div class="column" id="crypto-1">
+                            <label class="checkbox-container">Crypto | Algorithm 1
+                                <input type="checkbox" onclick="parameterEdit(this, 'algorithm')" id="crypto1" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="submit" onclick="encrypt()">Encrypt</button>
+            </div>
+
+            <div class="card output-card">
+                <div class="card-header">Output</div>
+                <div class="card-body">
+                    <div class="parameters" id="output-parameters">
+
+                    </div>
+                    <div class="output"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    <script src="assets/js/addElement.js"></script>
+    <script src="assets/js/windowControls.js"></script>
+    <script src="assets/js/mainWindow.js"></script>
+</body>
+
+</html>
