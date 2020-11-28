@@ -17,9 +17,6 @@ body {
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
-}
 .app {
   display: flex;
   flex-direction: column;
@@ -189,7 +186,15 @@ button:active {
   display: flex;
   flex-direction: row;
 }
-
+.sub-parameters {
+  background: var(--sub-parameters-background);
+  padding: 10px;
+  border-radius: 10px;
+}
+.sub-parameters.disabled {
+  filter: brightness(0.5) grayscale(1);
+  pointer-events: none;
+}
 .column {
   display: flex;
   flex-direction: column;
@@ -209,7 +214,7 @@ button:active {
   overflow: hidden auto;
 }
 
-.output :first-child {
+.output .cell:first-child {
   border-radius: 10px 10px 0 0;
 }
 
@@ -219,10 +224,14 @@ button:active {
   flex-direction: row;
   align-items: center;
   animation: slide-in 0.2s ease-out;
-  height: 50px;
+  height: 60px;
   cursor: pointer;
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
+  overflow: auto hidden;
+}
+.row::-webkit-scrollbar {
+  height: 5px;
 }
 
 @keyframes slide-in {
@@ -251,14 +260,21 @@ button:active {
 .cell-child {
   font-family: 'Source Code Pro', monospace;
 }
+.operator {
+  color: var(--operator-color);
+  margin-left: 10px;
+}
+.cell div {
+  white-space: nowrap
+}
 .prefix {
   color: var(--prefix-color);
 }
 
-
 .result {
   color: var(--result-color);
   margin-left: 10px;
+  width: calc(100% - 150px);
 }
 
 

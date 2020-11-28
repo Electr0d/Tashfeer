@@ -17,10 +17,12 @@
 
 
   --card-background: rgb(30, 30, 30);
+  --sub-parameters-background: rgb(40, 40, 40);
 
   --output-background: rgb(45, 45, 65);
 
-  --prefix-color: rgb(200, 50, 50);
+  --prefix-color: rgb(100, 100, 250);
+  --operator-color: rgb(200, 50, 50);
   --result-color: rgb(50, 200, 50);
 
 

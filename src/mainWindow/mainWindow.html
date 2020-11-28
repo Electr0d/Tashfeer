@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/dark.css">
-    <link rel="stylesheet" href="assets/css/mainWindow.css">
+    <link rel="stylesheet" href="assets/css/scrollBar.css">
     <link rel="stylesheet" href="assets/css/windowBar.css">
+    <link rel="stylesheet" href="assets/css/addParameter.css">
+    <link rel="stylesheet" href="assets/css/mainWindow.css">
     <title>Tashfeer</title>
 </head>
 
@@ -37,6 +39,7 @@
             </div>
         </div>
     </header>
+    <div style="height: 30px"></div>
 
     <div class="app">
 
@@ -47,19 +50,31 @@
 
                 <div class="card-body">
                     <div class="label">String:</div>
-                    <input class="number">
+                    <input class="string">
                     <div class="label">Parameters:</div>
                     <div class="parameters" id="input-parameters">
-                        <div class="column" id="crypto-1">
-                            <label class="checkbox-container">Crypto | Algorithm 1
-                                <input type="checkbox" onclick="parameterEdit(this, 'algorithm')" id="crypto1" checked="checked">
+                        <div class="column" id="crypto">
+                            <label class="checkbox-container">Crypto
+                                <input type="checkbox" onclick="parameterEdit(this, 'algorithm')" id="crypto" checked="checked">
                                 <span class="checkmark"></span>
                             </label>
+                            <div class="sub-parameters" id="crypto"></div>
+                        </div>
+                        <div class="column" id="sea">
+                            <label class="checkbox-container">SEA
+                                <input type="checkbox" onclick="parameterEdit(this, 'algorithm')" class="sea" id="sea" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="sub-parameters" id="sea">
+                                <span>Key:</span>
+                                <input class="key" maxLength="15" id="sea">
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <button class="submit" onclick="encrypt()">Encrypt</button>
+                <button class="submit" onclick="generate('encrypt')">Encrypt</button>
+                <button class="submit" onclick="generate('decrypt')">Decrypt</button>
             </div>
 
             <div class="card output-card">
@@ -77,7 +92,10 @@
 
     </div>
     <script src="assets/js/addElement.js"></script>
+    <script src="assets/js/addParameter.js"></script>
+    <script src="assets/js/saveModule.js"></script>
     <script src="assets/js/windowControls.js"></script>
+    <script src="assets/js/algorithms.js"></script>
     <script src="assets/js/mainWindow.js"></script>
 </body>
 
